@@ -1,0 +1,12 @@
+/*
+Sassy CSS for the login page
+Created by Winter
+*/
+
+@import '../../.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+.login {
+  .instructions {
+    margin: 50px 0;
+    padding: 0 15px;
+  }
+}

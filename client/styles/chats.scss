@@ -1,0 +1,15 @@
+/*
+Sassy CSS for the Chat overview
+Created by Rosel
+*/
+
+@import '../../.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+.item-chat {
+  .last-message-timestamp {
+    position: absolute;
+    top: 16px;
+    right: 38px;
+    font-size: 14px;
+    color: #9A9898;
+  }
+}

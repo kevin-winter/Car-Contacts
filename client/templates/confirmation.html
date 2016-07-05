@@ -1,0 +1,24 @@
+<!--
+HTML Template for the Confirmation Page
+Created by Winter
+-->
+<ion-view title="{{ confirmation.phone }}">
+  <ion-nav-buttons side="right">
+    <button ng-click="confirmation.confirm()" ng-disabled="!confirmation.code || confirmation.code.length === 0" class="button button-clear button-positive">Weiter</button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="text-center padding">
+      Sie bekommen in Kürze eine SMS an die oben angegebene Telefon Nummer
+    </div>
+    <div class="text-center padding">
+      Um Ihre Telefon Nummer zu verifizieren, geben Sie bitte den per SMS erhaltenen 4 stelligen Code ein.
+    </div>
+
+    <div class="list padding-top">
+      <label class="item item-input">
+        <input ng-model="confirmation.code" on-return="confirmation.confirm()" type="text" placeholder="Code">
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

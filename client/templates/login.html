@@ -1,0 +1,20 @@
+<!--
+HTML Template for the login page
+Created by Winter
+-->
+<ion-view title="Ihre Telefon Nummer">
+  <ion-nav-buttons side="right">
+    <button ng-click="logger.login()" ng-disabled="!logger.phone || logger.phone.length === 0" class="button button-clear button-positive">Weiter</button>
+  </ion-nav-buttons>
+  <ion-content class="login">
+    <div class="text-center instructions">
+      <p>Bitte geben Sie Ihre Telefon Nummer mit Landesvorwahl ein.</p>
+      <p>Zum Beispiel: +43 676 1234567</p>
+    </div>
+    <div class="list">
+      <label class="item item-input">
+        <input ng-model="logger.phone" on-return="logger.login()" type="text" placeholder="+43 676 1234567">
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

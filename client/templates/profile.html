@@ -1,0 +1,41 @@
+<!--
+HTML Template for viewing and editing the Profile
+Created by Teichert
+-->
+<ion-view title="Profil">
+  <ion-nav-buttons side="right">
+    <button ng-click="profile.updateName()" ng-disabled="!profile.name || profile.name.length === 0" class="button button-clear button-positive">Speichern</button>
+  </ion-nav-buttons>
+
+  <ion-content class="profile">
+      <div class="row instructions">
+          <div class="col col-33">
+        <a class="profile-picture positive" ng-click="profile.updatePicture()">
+          <div ng-if="profile.currentUser.profile.picture">
+            <img ng-src="{{ profile.currentUser.profile.picture }}" alt="Bild des Autos">
+          </div>
+          <div ng-if="!profile.currentUser.profile.picture" class="upload-placehoder">
+            Foto
+          </div>
+        </a>
+          </div>
+          <div class="col">
+        <p>Hier können Sie ein Foto Ihres Fahrzeugs einfügen.
+          Um anderen Nutzern Ihre Identität zu bestätigen,
+          platzieren Sie eine Nachricht "Car Contacts" innerhalb
+          Ihres Fahrzeugs und fotografieren Sie dieses, sodass
+          sowohl Nachricht als auch Kennzeichen lesbar sind</p>
+          </div>
+      </div>
+    <div class="list profile-name instructions">
+        <p>Bitte geben Sie die das Kennzeichen Ihres Fahrzeugs ein. Buchstaben sind groß zu schreiben,
+            ein- oder zweistellige Bezirkskürzel getrennt mit einem Bindestrich.</p>
+        <p>Zum Beispiel: GU-123AB</p>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Kennzeichen</span>
+            <input ng-model="profile.name" on-return="profile.updateName()"
+                   type="text" placeholder="GU-123AB" pattern="[A-Z]{1,2}-[A-Z0-9]{5}">
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

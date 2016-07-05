@@ -1,0 +1,9 @@
+<!--
+HTML Template for showing a single picture
+Created by Winter
+-->
+<div ng-controller="ChatCtrl as chat" class="modal image-modal transparent">
+    <ion-pane class="transparent">
+        <img ng-click="chat.hideImgModal()" ng-src="{{ chat.data | chatPicture }}" class="fullscreen-image"/>
+    </ion-pane>
+</div>
